@@ -71,6 +71,14 @@ Format json shows:
 }
 ```
 
+## Thor CLI Options
+
+To expose the format in Thor CLI options, you can use `CliFormat.formats`. Example:
+
+```ruby
+option :format, desc: "Output formats: #{CliFormat.formats.join(', ')}"
+```
+
 ## Text
 
 If you would like to grab just the text and not it shown, use the `text` method.
