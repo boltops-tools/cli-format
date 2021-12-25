@@ -1,3 +1,4 @@
+require "active_support"
 require "active_support/core_ext/string"
 require "cli_format/version"
 require "cli_format/autoloader"
