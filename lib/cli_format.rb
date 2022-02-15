@@ -9,6 +9,9 @@ module CliFormat
   # Your code goes here...
 
   def self.formats
-    %w[csv table tab json]
+    %w[csv equal table tab json]
   end
+
+  cattr_accessor :default_format
+  self.default_format = "json"
 end
