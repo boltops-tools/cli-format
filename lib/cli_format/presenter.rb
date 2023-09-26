@@ -6,10 +6,12 @@ module CliFormat
       @rows = []
     end
 
-    def show
+    delegate :text, :show, to: :presenter
+
+    def presenter
+      return @presenter if @presenter
       presenter_class = "CliFormat::Presenter::#{format.camelize}".constantize
-      presenter = presenter_class.new(@options, @header, @rows)
-      presenter.show
+      @presenter = presenter_class.new(@options, @header, @rows)
     end
 
     # Formats: tabs, markdown, json, csv, table, etc
