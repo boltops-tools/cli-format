@@ -1,7 +1,7 @@
 module CliFormat
   class Presenter
     attr_accessor :header, :rows
-    def initialize(options)
+    def initialize(options={})
       @options = options
       @rows = []
     end
