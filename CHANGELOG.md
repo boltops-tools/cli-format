@@ -3,6 +3,9 @@
 All notable changes to this project will be documented in this file.
 This project *loosely* adheres to [Semantic Versioning](http://semver.org/), even before v1.0.
 
+## [0.5.0] - 2023-12-02
+- make options optional
+
 ## [0.4.0] - 2023-10-04
 - [#4](https://github.com/boltops-tools/cli-format/pull/4) markdown format support
 
