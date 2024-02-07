@@ -6,11 +6,17 @@ module CliFormat
       @rows = []
     end
 
-    delegate :text, :show, to: :presenter
+    delegate :text, :show, :emtpy_message, :empty_message=, to: :presenter
 
     def presenter
       return @presenter if @presenter
-      presenter_class = "CliFormat::Presenter::#{format.camelize}".constantize
+      presenter_class = begin
+        "CliFormat::Presenter::#{format.camelize}".constantize
+      rescue NameError => e
+        default = CliFormat.default_format
+        puts "WARN: format not found: #{format}. Using default format: #{default}"
+        "CliFormat::Presenter::#{default.camelize}".constantize
+      end
       @presenter = presenter_class.new(@options, @header, @rows)
     end
 
