@@ -9,7 +9,16 @@ module CliFormat
   # Your code goes here...
 
   def self.formats
-    %w[csv equal json markdown space tab table]
+    %w[
+      csv
+      dotenv
+      equal
+      json
+      markdown
+      space
+      tab
+      table
+    ]
   end
 
   cattr_accessor :default_format

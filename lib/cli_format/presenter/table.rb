@@ -1,4 +1,4 @@
-require 'text-table'
+require "text-table"
 
 class CliFormat::Presenter
   class Table < Base
