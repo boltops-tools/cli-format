@@ -1,5 +1,6 @@
 class CliFormat::Presenter
   class Base
+    attr_accessor :header, :rows
     attr_writer :empty_message
     def initialize(options, header, rows)
       @options, @header, @rows = options, header, rows
