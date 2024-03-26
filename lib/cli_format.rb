@@ -13,6 +13,7 @@ module CliFormat
       csv
       dotenv
       equal
+      info
       json
       markdown
       space
