@@ -3,6 +3,9 @@
 All notable changes to this project will be documented in this file.
 This project *loosely* adheres to [Semantic Versioning](http://semver.org/), even before v1.0.
 
+## [0.6.1] - 2024-04-27
+- [#6](https://github.com/boltops-tools/cli-format/pull/6) improve json format with no header, simple hash
+
 ## [0.6.0] - 2024-04-15
 - [#5](https://github.com/boltops-tools/cli-format/pull/5) More formats
 - dotenv format
